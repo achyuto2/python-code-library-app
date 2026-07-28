@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: shaikmustafa/arshad:db
+    image: achyuty/pyapp:db
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: shaikmustafa/arshad:auth
+    image: achyuty/pyapp:auth
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: shaikmustafa/arshad:book
+    image: achyuty/pyapp:book
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: shaikmustafa/arshad:borrow
+    image: achyuty/pyapp:borrow
     deploy:
       replicas: 1
     ports:
@@ -43,7 +43,7 @@ services:
       - db
 
   frontend:
-    image: shaikmustafa/arshad:frontend
+    image: achyuty/pyapp:app
     deploy:
       replicas: 1
     ports:
