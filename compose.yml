@@ -58,4 +58,3 @@ services:
 networks:
   mynetwork:
     driver: overlay
-    external: true
